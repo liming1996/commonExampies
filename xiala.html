@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>demo</title>
+    <style>
+        * {
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .setting-warp {
+            position: relative;
+        }
+
+        #triangle-up {
+            position: absolute;
+            width: 0;
+            height: 0px;
+            display: inline-block;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 8px solid #c3c3c3;
+            margin: -8px 0 0 31px;
+            left: -22px;
+            top: 29px;
+        }
+
+        ul {
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            border: 1px solid;
+            left: 0px;
+            top: 13px;
+        }
+
+        ul li:hover {
+            background: #e4d8d8;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="setting-warp" onmouseover="showSetting()" onmouseleave="hideSetting()">
+        <a href="" class="setting">产品</a>&nbsp;&nbsp;&nbsp;
+        <div class="setting-content">
+            <span id="triangle-up"></span>
+            <ul>
+                <li>链接</li>
+                <li>链接2</li>
+                <li>链接3</li>
+                <li>链接4</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript">
+    function showSetting() {
+        document.getElementsByClassName("setting-content")[0].style.display = 'inline-block';
+    }
+    function hideSetting() {
+        document.getElementsByClassName("setting-content")[0].style.display = 'none';
+    }
+
+</script>
+</style>
+
+</html>
