@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script> -->
+
+    <style>
+        img {
+            width: 260px;
+            height: 180px;
+            border: 10px solid #e4e1e1;
+            border-radius: 5px;
+            margin: 5px;
+        }
+       
+        ul li{
+            list-style-type: none;
+            display: inline-block;
+        }
+
+         div {
+            text-align: center;
+        } 
+    </style>
+</head>
+
+<body data-ng-app="">
+    <h1>照片墙</h1>
+
+    <div data-ng-init="points = [
+
+         '../images/1.jpg',
+         '../images/2.jpg',
+         '../images/3.jpg',
+         '../images/4.jpg',
+         '../images/5.jpg',
+         '../images/6.jpg',
+         '../images/7.jpg',
+         '../images/8.jpg',
+         '../images/9.jpg',
+         '../images/10.jpg',
+         '../images/11.jpg',
+         '../images/12.jpg',
+         
+         ]">
+        <ul>
+            <li data-ng-repeat="x in points">
+               <img ng-src="{{ x }}"> 
+            </li>
+        </ul>
+    </div>
+    
+
+
+
+    <!-- <script>
+        //
+
+        var photoWall = [
+
+            {
+                id: 1,
+                name: "my1 = '../images/1.jpg'",
+                src: "{{my1}}"
+            },
+            {
+                id: 2,
+                name: "my3 = '../images/2.jpg'",
+                src: "{{my3}}"
+            },
+            {
+                id: 3,
+                name: "my3 = '../images/3.jpg'",
+                src: "{{my3}}"
+            },
+            {
+                id: 4,
+                name: "my4 = '../images/4.jpg'",
+                src: "{{my4}}"
+            },
+            {
+                id: 5,
+                name: "my5 = '../images/5.jpg'",
+                src: "{{my5}}"
+            },
+            {
+                id: 6,
+                name: "my6 = '../images/6.jpg'",
+                src: "{{my6}}"
+            },
+            {
+                id: 7,
+                name: "my7 = '../images/7.jpg'",
+                src: "{{my7}}"
+            },
+            {
+                id: 8,
+                name: "my8 = '../images/8.jpg'",
+                src: "{{my8}}"
+            },
+            {
+                id: 9,
+                name: "my9 = '../images/9.jpg'",
+                src: "{{my9}}"
+            },
+
+        ]
+
+        function getPh(num) {
+            for (var i = 0; i < photoWall.length; i++) {
+
+                var html =
+
+                    '<div ng-init="' + photoWall[i].name + '">' +
+                    '<img ng-src="' + photoWall[i].src + '">' +
+                    '</div>'
+
+                $("#PhotoWall").append(html);
+            }
+        }
+
+
+
+        $(document).ready(function () {
+            console.log("start -------");
+
+
+
+            getPh(0);
+
+
+        });
+    </script> -->
+</body>
+
+</html>
